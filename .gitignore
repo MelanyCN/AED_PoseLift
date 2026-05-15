@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific - Large datasets and processed files
+Pickle_files/
+Json_files/
+STG-NF/
+data/
+**/data/
+dataset/
+datasets/
+**/dataset/
+**/datasets/
+outputs/
+**/outputs/
+
+# Generated data files
+*.json
+*.jsonl
+*.pkl
+*.pickle
+*.joblib
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+
+# Cache and temporary files
+*.cache
+.pytest_cache/
+**/.pytest_cache/
+htmlcov/
+
+# Environment variables
+.env
+.env.local
+
+# Local assistant/session files
+.agents/
+.codex/
