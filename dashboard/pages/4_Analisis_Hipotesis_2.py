@@ -37,10 +37,10 @@ KEYPOINTS_TEMPORALES = [
 ]
 
 VARIABLES_H2 = [
-    "vel_left_wrist",
-    "vel_right_wrist",
-    "vel_left_elbow",
-    "vel_right_elbow",
+    "left_wrist_speed",
+    "right_wrist_speed",
+    "left_elbow_speed",
+    "right_elbow_speed",
     "left_wrist_hip_dist",
     "right_wrist_hip_dist",
     "left_elbow_hip_dist",
@@ -149,6 +149,7 @@ def calcular_variables_temporales(df: pd.DataFrame):
 
         df[f"vel_{kp}"] = np.sqrt(dx**2 + dy**2) / dframe
         df[f"vel_{kp}"] = df[f"vel_{kp}"].where(dframe > 0)
+
 
     # Distancias muñeca/codo - cadera correspondiente
     pares = {
@@ -506,9 +507,6 @@ st.info(
     **Pregunta:** ¿La variabilidad, velocidad o desplazamiento relativo de muñecas y codos
     respecto al torso/cadera difiere entre comportamiento normal y shoplifting?
 
-    **Idea principal:** esta hipótesis incorpora la dimensión temporal del dataset.
-    En lugar de mirar solo la pose en un frame, se calcula cómo cambian las posiciones
-    corporales entre frames consecutivos.
     """
 )
 
